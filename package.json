@@ -1,0 +1,46 @@
+{
+  "name": "storybook-boilerplate",
+  "version": "1.0.0",
+  "description": "Build storybook with typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn build-storybook -o ./build",
+    "dev": "start-storybook -p 6006"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jack5241027/storybook-boilerplate.git"
+  },
+  "keywords": [
+    "typescript",
+    "storybook"
+  ],
+  "author": "JackChan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jack5241027/storybook-boilerplate/issues"
+  },
+  "homepage": "https://github.com/jack5241027/storybook-boilerplate#readme",
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.9",
+    "@storybook/addon-controls": "^6.3.9",
+    "@storybook/addon-docs": "^6.3.9",
+    "@storybook/addon-toolbars": "^6.3.9",
+    "@storybook/addon-viewport": "^6.3.9",
+    "@storybook/react": "^6.3.9",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.32.0",
+    "prettier": "^2.4.1",
+    "prettier-eslint-cli": "^5.0.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.1",
+    "styled-normalize": "^8.0.7"
+  }
+}
