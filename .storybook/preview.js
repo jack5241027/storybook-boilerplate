@@ -1,12 +1,12 @@
 import React from 'react'
-import StyleProvider from '@/containers/StyleProvider'
+import ThemeProvider from '@/containers/ThemeProvider'
 
 export const decorators = [
   (Story, context) => {
     return (
-      <StyleProvider theme={context.globals.theme}>
+      <ThemeProvider theme={context.globals.theme}>
         <Story {...context} />
-      </StyleProvider>
+      </ThemeProvider>
     )
   },
 ]
