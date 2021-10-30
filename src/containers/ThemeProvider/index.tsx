@@ -3,7 +3,11 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
 import { darkTheme, lightTheme } from '../../theme'
 
-const ThemeProvider: React.FC = ({ children, theme: themeName }) => {
+export interface ThemedProps {
+  themeName: string
+}
+
+const ThemeProvider: React.FC<ThemedProps> = ({ children, themeName: themeName }) => {
   const theme = themeName === 'dark' ? darkTheme : lightTheme
   return (
   <MuiThemeProvider theme={theme}>

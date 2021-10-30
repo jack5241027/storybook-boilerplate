@@ -24,7 +24,7 @@
 		"rootDir": "./",
 		"strict": true,
 		"stripInternal": false,
-		"target": "es5",
+		"target": "esnext",
 		"typeRoots": [
 			"./src/typings",
 			"node_modules/@types"

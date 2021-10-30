@@ -2,14 +2,14 @@
   "name": "storybook-boilerplate",
   "version": "1.0.0",
   "description": "Build storybook with typescript",
-  "main": "index.js",
   "scripts": {
-    "build": "yarn build-storybook -o ./build",
-    "dev": "start-storybook -p 6006"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jack5241027/storybook-boilerplate.git"
+    "clean": "rimraf build && rimraf dist",
+    "rollup": "rollup -c",
+    "build": "npm run clean && build-storybook -o ./build",
+    "dev": "start-storybook -p 6006",
+    "test": "jest --passWithNoTests",
+    "prepare": "husky install",
+    "lint:staged": "lint-staged"
   },
   "keywords": [
     "typescript",
@@ -17,10 +17,18 @@
   ],
   "author": "JackChan",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jack5241027/storybook-boilerplate/issues"
+  "engines": {
+    "node": "14.17.6"
   },
-  "homepage": "https://github.com/jack5241027/storybook-boilerplate#readme",
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "main": "dist/common-ui.js",
+  "typings": "dist/common-ui.d.ts",
+  "publishConfig": {},
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.9",
     "@storybook/addon-controls": "^6.3.9",
@@ -30,9 +38,18 @@
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "babel-plugin-module-resolver": "^4.1.0",
+    "esbuild": "^0.13.8",
     "eslint": "^7.32.0",
+    "husky": "^7.0.2",
+    "jest": "^27.2.5",
+    "lint-staged": "^11.2.3",
     "prettier": "^2.4.1",
     "prettier-eslint-cli": "^5.0.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.58.0",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-esbuild": "^4.6.0",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.4.3"
   },
   "dependencies": {

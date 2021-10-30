@@ -1,5 +1,5 @@
 import space from '../space'
-import borderRadius from '../border-radius'
+import borderRadius from '../base/border-radius'
 
 const mediumLayout = {
   fontSize: space.s,

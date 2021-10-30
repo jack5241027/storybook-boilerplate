@@ -11,7 +11,7 @@ const actions = {
 
 export default {
   component: Button,
-  title: 'Components/Button',
+  title: 'Base/Button',
 } as Meta
 
 const Template: Story<ButtonProps> = (args) => <Button {...actions} {...args}>Button</Button>
@@ -22,11 +22,4 @@ Default.args = {
   size: 'medium',
   variant: 'contained',
   color: 'primary',
-}
-
-export const CustomColorButton = Template.bind({})
-
-CustomColorButton.args = {
-  ...Default.args,
-  color: 'secondary',
 }
